@@ -1,0 +1,4 @@
+[default]
+path = "~/Pictures/Wallpapers"
+duration = "1h"
+transition-time = 2000
