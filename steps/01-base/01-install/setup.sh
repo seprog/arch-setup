@@ -2,13 +2,13 @@
 
 
 if ! type "paru" > /dev/null; then
-  cd /tmp
   sudo pacman --sync --needed --noconfirm base-devel
-  git clone https://aur.archlinux.org/paru.git
-  cd paru
+  [[ -d /tmp/paru ]] && sudo rm --recursive /tmp/paru
+  git clone https://aur.archlinux.org/paru.git /tmp/paru
+  cd /tmp/paru
   makepkg --syncdeps --install --needed --noconfirm
   cd ..
-  sudo rm --recursive paru
+  sudo rm --recursive /tmp/paru
 fi
 
 paru -S --needed --noconfirm $(grep "^[^#]" packages)
