@@ -8,6 +8,9 @@ extra/foot-terminfo
 # File Manager
 extra/dolphin
 
+# Launcher
+wofi
+
 # Wallpaper
 extra/wpaperd
 
