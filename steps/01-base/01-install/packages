@@ -1,5 +1,9 @@
+# Shell
+extra/fish
+
 # Terminal
-extra/kitty
+extra/foot
+extra/foot-terminfo
 
 # File Manager
 extra/dolphin
