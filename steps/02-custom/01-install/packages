@@ -10,6 +10,7 @@ core/python
 extra/devtools
 extra/discord
 extra/docker
+extra/fastfetch
 extra/ffmpeg
 extra/gimp
 extra/github-cli
