@@ -3,6 +3,7 @@
 
 SETUP_PATH=$PWD
 
+# TODO suppress type error
 if ! type "paru" > /dev/null; then
   sudo pacman --sync --needed --noconfirm base-devel
   [[ -d /tmp/paru ]] && sudo rm --recursive /tmp/paru
