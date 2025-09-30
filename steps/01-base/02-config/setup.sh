@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
 
-cp --recursive home/. ~
+SETUP_PATH=$PWD
+
+cp --recursive $SETUP_PATH/home/. ~

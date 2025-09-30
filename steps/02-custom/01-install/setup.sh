@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
 
-paru -S --needed --noconfirm $(grep "^[^#]" packages)
+SETUP_PATH=$PWD
+
+paru -S --needed --noconfirm $(grep "^[^#]" $SETUP_PATH/packages)
