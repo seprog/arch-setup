@@ -13,6 +13,7 @@ wofi
 
 # Wallpaper
 extra/wpaperd
+extra/plasma-workspace-wallpapers
 
 # Network Manager
 extra/network-manager-applet
