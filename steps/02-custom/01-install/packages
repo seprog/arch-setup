@@ -19,6 +19,7 @@ extra/glances
 extra/jdk-openjdk
 extra/kotlin
 extra/lutris
+extra/mpv
 extra/neovim
 extra/nextcloud-client
 extra/nodejs
