@@ -1,7 +1,7 @@
 {
   "bootloader": "Systemd-boot",
   "custom_commands": [
-    "for user in $(ls /home); do sudo -u $user sh -c 'git clone -b dev https://github.com/seprog/arch-setup ~/arch-setup && cd ~/arch-setup && ./install'; done"
+    "for user in $(ls /home); do sudo -u $user sh -c 'git clone -b dev https://github.com/seprog/arch-setup ~/arch-setup && cd ~/arch-setup && ./install.sh'; done"
   ],
   "kernels": [ "linux-zen" ],
   "mirror_config": {
