@@ -27,6 +27,7 @@ extra/nodejs
 extra/npm
 extra/obs-studio
 extra/obsidian
+extra/texlive
 extra/vlc
 extra/yt-dlp
 multilib/steam
