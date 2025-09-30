@@ -28,6 +28,7 @@ extra/obsidian
 extra/texlive
 extra/vlc
 extra/yt-dlp
+extra/zsh
 multilib/steam
 aur/anki
 # TODO BROKEN: aur/atlauncher
