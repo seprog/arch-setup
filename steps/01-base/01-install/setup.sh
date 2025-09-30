@@ -6,7 +6,7 @@ if ! type "paru" > /dev/null; then
   sudo pacman --sync --needed --noconfirm base-devel
   git clone https://aur.archlinux.org/paru.git
   cd paru
-  makepkg --sync-deps --install --needed --noconfirm
+  makepkg --syncdeps --install --needed --noconfirm
   cd ..
   sudo rm --recursive paru
 fi
