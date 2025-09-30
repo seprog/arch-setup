@@ -27,6 +27,8 @@ extra/gtk4
 
 # Hyperland
 extra/hyprland
+extra/hypridle
+extra/hyprlock
 extra/uwsm
 extra/libnewt
 extra/xdg-desktop-portal-hyprland
