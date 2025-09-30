@@ -15,6 +15,9 @@ wofi
 extra/wpaperd
 extra/plasma-workspace-wallpapers
 
+# Bar
+extra/waybar
+
 # Network Manager
 extra/network-manager-applet
 
