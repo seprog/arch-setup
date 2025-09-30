@@ -11,6 +11,9 @@ extra/dolphin
 # Network Manager
 extra/network-manager-applet
 
+# Clipboard
+extra/cliphist
+
 # Login Manager
 extra/greetd
 extra/greetd-regreet
@@ -28,6 +31,10 @@ extra/mako
 # Audio
 extra/pipewire
 extra/wireplumber
+extra/playerctl
+
+# Screen
+extra/brightnessctl
 
 # Authentication Agent
 extra/hyprpolkitagent
