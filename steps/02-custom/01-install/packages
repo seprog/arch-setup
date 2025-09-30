@@ -1,0 +1,37 @@
+# Fonts
+extra/nerd-fonts
+extra/noto-fonts
+extra/noto-fonts-emoji
+extra/noto-fonts-extra
+
+# Other
+core/man-db
+core/python
+extra/devtools
+extra/discord
+extra/docker
+extra/ffmpeg
+extra/gimp
+extra/github-cli
+extra/glab
+extra/glances
+extra/jdk-openjdk
+extra/kotlin
+extra/lutris
+extra/neovim
+extra/nextcloud-client
+extra/nodejs
+extra/npm
+extra/obs-studio
+extra/obsidian
+extra/vlc
+extra/yt-dlp
+multilib/steam
+aur/anki
+# TODO BROKEN: aur/atlauncher
+# TODO BROKEN: aur/bun
+aur/paru
+aur/spotify
+aur/visual-studio-code-bin
+# TODO INSTALL WITH GUI: aur/zen-browser
+aur/zoom

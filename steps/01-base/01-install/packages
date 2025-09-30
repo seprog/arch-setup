@@ -1,0 +1,36 @@
+# Terminal
+extra/kitty
+
+# File Manager
+extra/dolphin
+
+# Network Manager
+extra/network-manager-applet
+
+# Login Manager
+extra/greetd
+extra/greetd-regreet
+extra/gtk4
+
+# Hyperland
+extra/hyprland
+extra/uwsm
+extra/libnewt
+extra/xdg-desktop-portal-hyprland
+
+# Notification Daemon
+extra/mako
+
+# Audio
+extra/pipewire
+extra/wireplumber
+
+# Authentication Agent
+extra/hyprpolkitagent
+
+# QtWayland Support
+extra/qt5-wayland
+extra/qt6-wayland
+
+# Fonts
+# TODO check which fonts are actually needed for base support
