@@ -27,6 +27,7 @@ extra/obs-studio
 extra/obsidian
 extra/texlive
 extra/vlc
+extra/vlc-plugin-chromecast
 extra/yt-dlp
 multilib/steam
 aur/anki
