@@ -33,4 +33,5 @@ extra/qt5-wayland
 extra/qt6-wayland
 
 # Fonts
-# TODO check which fonts are actually needed for base support
+extra/nerd-fonts
+extra/noto-fonts
