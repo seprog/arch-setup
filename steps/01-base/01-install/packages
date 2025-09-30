@@ -8,6 +8,9 @@ extra/foot-terminfo
 # File Manager
 extra/dolphin
 
+# Wallpaper
+extra/wpaperd
+
 # Network Manager
 extra/network-manager-applet
 
