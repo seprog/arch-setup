@@ -2,5 +2,3 @@
 
 
 SETUP_PATH=$PWD
-
-reboot
