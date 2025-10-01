@@ -63,11 +63,11 @@
   },
   "cpu": {
     "format": "🖳{usage}%",
-    "on-click": "foot -e htop"
+    "on-click": "footclient -e htop"
   },
   "memory": {
     "format": "🖴 {: >3}%",
-    "on-click": "foot -e htop"
+    "on-click": "footclient -e htop"
   },
   "temperature": {
     "thermal-zone": 7,  // Check with: # cat /sys/class/hwmon/hwmon*/temp1_input
@@ -122,7 +122,7 @@
     },
     "exec-if": "which waybar-module-pacman-updates",
     "exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 7200 --network-interval-seconds",
-    "on-click": "foot -e update"
+    "on-click": "footclient -e update"
   },
   "custom/power": {
     "format":"⏻",
