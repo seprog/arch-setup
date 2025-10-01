@@ -18,6 +18,7 @@ aur/wlogout
 extra/wofi
 
 # Styling
+extra/kvantum
 extra/kvantum-qt5
 aur/plasma5-themes-sweet-full-git
 aur/beautyline
