@@ -3,4 +3,4 @@
 
 SETUP_PATH=$PWD
 
-source ~/.bash_profile
+reboot
