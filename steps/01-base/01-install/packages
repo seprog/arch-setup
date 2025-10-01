@@ -18,6 +18,8 @@ extra/wofi
 extra/kvantum-qt5
 aur/plasma5-themes-sweet-full-git
 aur/beautyline
+extra/gsettings-desktop-schemas
+extra/nwg-look
 
 # Wallpaper
 extra/wpaperd

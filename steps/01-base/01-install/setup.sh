@@ -15,3 +15,5 @@ if ! type "paru" > /dev/null; then
 fi
 
 paru -S --needed --noconfirm $(grep "^[^#]" $SETUP_PATH/packages)
+
+git clone https://gist.github.com/31cf5e31e2edb583609d6daad3927840.git ~/.config/Kvantum/Sweet
