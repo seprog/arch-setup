@@ -16,6 +16,7 @@ extra/wofi
 
 # Styling
 extra/kvantum-qt5
+aur/plasma5-themes-sweet-full-git
 
 # Wallpaper
 extra/wpaperd
