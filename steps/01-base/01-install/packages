@@ -24,10 +24,12 @@ extra/network-manager-applet
 # Clipboard
 extra/cliphist
 
-# Hyperland
-extra/hyprland
+# Idle and Lockscreen
 extra/hypridle
 extra/hyprlock
+
+# Hyperland
+extra/hyprland
 extra/uwsm
 extra/libnewt
 extra/xdg-desktop-portal-hyprland
