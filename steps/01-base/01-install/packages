@@ -68,7 +68,9 @@ extra/hyprpolkitagent
 
 # QtWayland Support
 extra/qt5-wayland
+extra/qt5ct
 extra/qt6-wayland
+extra/qt6ct
 extra/hyprland-qt-support
 
 # Fonts
