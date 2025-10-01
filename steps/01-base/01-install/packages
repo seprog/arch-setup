@@ -48,6 +48,10 @@ extra/playerctl
 # Screen
 extra/brightnessctl
 
+# Screenshot
+extra/hyprshot
+extra/hyprpicker
+
 # Authentication Agent
 extra/hyprpolkitagent
 
