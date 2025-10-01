@@ -20,6 +20,7 @@ extra/plasma-workspace-wallpapers
 
 # Bar
 extra/waybar
+aur/waybar-module-pacman-updates
 
 # Network Manager
 extra/network-manager-applet
