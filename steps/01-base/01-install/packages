@@ -11,6 +11,9 @@ extra/dolphin
 # Dialogs
 extra/yad
 
+# Logout
+aur/wlogout
+
 # Launcher
 extra/wofi
 
