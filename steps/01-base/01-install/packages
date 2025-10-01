@@ -12,7 +12,7 @@ extra/dolphin
 extra/yad
 
 # Launcher
-wofi
+extra/wofi
 
 # Styling
 extra/kvantum-qt5
