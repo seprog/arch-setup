@@ -1,18 +1,14 @@
 {
-  "layer": "top", // Waybar at top layer
-  "position": "top", // Waybar position (top|bottom|left|right)
+  "layer": "top",
+  "position": "top",
   "height": 40,
   "margin": "0 5 0 5",
   "spacing":0,
 
-  // Choose the order of the modules
-  // Add according to your wishes: "custom/weather"
+  "modules-left": [ "hyprland/workspaces", "hyprland/window" ],
+  "modules-center": [ "custom/network_traffic" ],
+  "modules-right": [ "custom/updates", "backlight", "temperature", "cpu", "memory", "battery", "pulseaudio", "network", "tray", "idle_inhibitor", "clock","custom/power" ],
 
-  "modules-left": ["custom/launcher", "hyprland/workspaces", "hyprland/window"],
-  "modules-center": ["custom/network_traffic"],
-  "modules-right": ["custom/updates", "backlight", "custom/keyboard-layout", "temperature", "cpu", "memory", "battery", "pulseaudio", "network", "tray", "idle_inhibitor", "clock","custom/power"],
-
-  // Modules configuration
   "hyprland/workspaces": {
     "format": "{icon}",
     "on-click": "activate",
@@ -54,8 +50,7 @@
   },
   "clock": {
     "tooltip-format": "<big>{:%A, %d.%B %Y }</big>\n<tt><small>{calendar}</small></tt>",
-    "format": " {:%a %d %b  %I:%M %p}",	//12 hour format
-    //"format": " {:%a %d %b  %H:%M}",	//24 hour format
+    "format": " {:%a %d %b  %H:%M}",
     "format-alt": " {:%d/%m/%Y  %H:%M:%S}",
     //"max-length": 200
     "interval": 1,
@@ -63,11 +58,11 @@
   },
   "cpu": {
     "format": "🖳{usage}%",
-    "on-click": "footclient -e htop"
+    "on-click": "footclient -e glances"
   },
   "memory": {
     "format": "🖴 {: >3}%",
-    "on-click": "footclient -e htop"
+    "on-click": "footclient -e glances"
   },
   "temperature": {
     "thermal-zone": 7,  // Check with: # cat /sys/class/hwmon/hwmon*/temp1_input
@@ -81,8 +76,7 @@
     "format": "{icon} {percent: >3}%",
     "format-icons": ["", ""],
     "on-scroll-down": "brightnessctl -c backlight set 1%-",
-    "on-scroll-up": "brightnessctl -c backlight set +1%",
-    "on-click": "~/.config/waybar/scripts/backlight-hint.sh"
+    "on-scroll-up": "brightnessctl -c backlight set +1%"
   },
   "battery": {
     "states": {
@@ -122,20 +116,11 @@
     },
     "exec-if": "which waybar-module-pacman-updates",
     "exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 7200 --network-interval-seconds",
-    "on-click": "footclient -e update"
+    "on-click": "footclient -e paru"
   },
   "custom/power": {
     "format":"⏻",
-    "on-click": "nwgbar",
-    "tooltip": false
-  },
-  "custom/keyboard-layout": {
-    "format": " Cheat", // Icon: keyboard
-    "on-click": "~/.config/waybar/scripts/keyhint.sh"
-  },
-  "custom/launcher": {
-    "format":"    ",
-    "on-click": "exec nwg-drawer -c 7 -is 70 -spacing 23",
+    "on-click": "wlogout",
     "tooltip": false
   },
   "custom/network_traffic": {
@@ -144,7 +129,7 @@
     "format-ethernet": "{icon} {ifname} ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}"    // optional
   },
   "pulseaudio": {
-    "scroll-step": 3, // %, can be a float
+    "scroll-step": 1, // %, can be a float
     "format": "{icon} {volume}% {format_source}",
     "format-bluetooth": "{volume}% {icon} {format_source}",
     "format-bluetooth-muted": " {icon} {format_source}",
@@ -164,11 +149,5 @@
     },
     "on-click": "footclient -T waybar_alsamixer -e alsamixer -M",
     "on-click-right": "pavucontrol"
-  },
-  // https://github.com/chubin/wttr.in
-  "custom/weather": {
-    "exec": "curl 'https://wttr.in/Essen?format=2'",
-    "interval": 900,
-    "on-click": "yad --html --uri='https://wttr.in/Essen' --center --fixed --width=1000 --height=680 --timeout=60 --timeout-indicator=right"
   }
 }
