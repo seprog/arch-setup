@@ -1,3 +1,6 @@
+# Display Manager
+extra/sddm
+
 # Shell
 extra/fish
 
