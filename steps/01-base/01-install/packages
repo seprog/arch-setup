@@ -24,11 +24,6 @@ extra/network-manager-applet
 # Clipboard
 extra/cliphist
 
-# Login Manager
-extra/greetd
-extra/greetd-regreet
-extra/gtk4
-
 # Hyperland
 extra/hyprland
 extra/hypridle
