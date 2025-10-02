@@ -1,13 +1,12 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 40,
-  "margin": "0 5 0 5",
+  "margin": "5 5 0 5",
   "spacing":0,
 
-  "modules-left": [ "hyprland/workspaces", "hyprland/window" ],
-  "modules-center": [ "custom/network_traffic" ],
-  "modules-right": [ "custom/updates", "backlight", "temperature", "cpu", "memory", "battery", "pulseaudio", "network", "tray", "idle_inhibitor", "clock","custom/power" ],
+  "modules-left": [ "hyprland/workspaces" ],
+  "modules-center": [ "clock" ],
+  "modules-right": [ "custom/updates", "pulseaudio", "backlight", "cpu", "memory", "custom/network_traffic", "tray", "battery", "idle_inhibitor","custom/power" ],
 
   "hyprland/workspaces": {
     "format": "{icon}",
@@ -30,11 +29,6 @@
     },
     "on-scroll-up": "hyprctl dispatch workspace e+1",
     "on-scroll-down": "hyprctl dispatch workspace e-1"
-  },
-  "hyprland/window": {
-    "format": "{}",
-    "icon":true,
-    "icon-size" : 20
   },
   "idle_inhibitor": {
     "format": "{icon}",
@@ -64,13 +58,6 @@
     "format": "🖴 {: >3}%",
     "on-click": "footclient -e glances"
   },
-  "temperature": {
-    "thermal-zone": 7,  // Check with: # cat /sys/class/hwmon/hwmon*/temp1_input
-    "hwmon-path": "/sys/class/hwmon/hwmon7/temp1_input",
-    "critical-threshold": 80,
-    "format-critical": "{temperatureC}°C ",
-    "format": "{temperatureC}°C "
-  },
   "backlight": {
     // "device": "acpi_video1",
     "format": "{icon} {percent: >3}%",
@@ -92,21 +79,6 @@
     //"format": "&#x202b;{icon}&#x202c; {capacity}%",
     //"format-icons": ["ﱉ","ﱊ","ﱌ","ﱍ","ﱋ"]
   },
-  "network": {
-    //"interface": "wlp0s20f3", // (Optional) To force the use of this interface  "format-wifi": "  {essid}",
-    "format": "⚠Disabled",
-    "format-wifi": "",
-    "format-ethernet": "",
-    "format-linked": "{ifname} (No IP)",
-    "format-disconnected": "⚠Disabled",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}",
-    "family": "ipv4",
-    "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
-    "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
-    //"min-length": 2,
-    //"max-length": 2,
-    "on-click": "nm-connection-editor"
-  },
   "custom/updates": {
     "format": "{} {icon}",
     "return-type": "json",
@@ -126,7 +98,8 @@
   "custom/network_traffic": {
     "exec": "~/.config/waybar/scripts/network_traffic.sh",
     "return-type": "json",
-    "format-ethernet": "{icon} {ifname} ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}"    // optional
+    "format-ethernet": "{icon} {ifname} ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
+    "min-length": 12
   },
   "pulseaudio": {
     "scroll-step": 1, // %, can be a float
