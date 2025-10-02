@@ -1,4 +1,4 @@
 [default]
 path = "/usr/share/wallpapers"
-duration = "1h"
+duration = "20m"
 transition-time = 2000
