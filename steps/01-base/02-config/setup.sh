@@ -13,3 +13,4 @@ systemctl --user enable waybar.service
 
 xdg-user-dirs-update
 chsh -s $(which fish)
+rm ~/.bash*
