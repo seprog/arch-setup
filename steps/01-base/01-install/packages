@@ -9,7 +9,7 @@ extra/foot
 extra/foot-terminfo
 
 # File Manager
-extra/dolphin
+extra/thunar
 
 # Dialogs
 extra/yad
