@@ -11,9 +11,6 @@ extra/foot-terminfo
 # File Manager
 extra/thunar
 
-# Dialogs
-extra/yad
-
 # Logout
 aur/wlogout
 
