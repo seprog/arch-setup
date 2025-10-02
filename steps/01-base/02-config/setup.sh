@@ -11,7 +11,7 @@ systemctl --user enable foot-server.service
 systemctl --user enable hyprpolkitagent.service
 systemctl --user enable waybar.service
 
-mkdir --parents ~/home/Pictures/Wallpaper
+mkdir --parents ~/Pictures/Wallpaper
 ln --symbolic \
   /usr/share/Backgrounds/* \
   /usr/share/backgrounds/* \
