@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 
 a=$(pidof hypridle)
 if [[ $a ]]
