@@ -30,7 +30,8 @@ extra/nwg-look
 
 # Wallpaper
 extra/wpaperd
-extra/plasma-workspace-wallpapers
+aur/wiki-loves-earth-walppapers
+aur/wiki-loves-monuments-walppapers
 
 # Bar
 extra/waybar
