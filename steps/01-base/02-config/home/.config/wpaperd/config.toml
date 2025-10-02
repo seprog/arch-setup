@@ -2,3 +2,4 @@
 path = "/usr/share/backgrounds"
 duration = "20m"
 transition-time = 2000
+exec = "~/.config/wpaperd/update-theme.sh"
