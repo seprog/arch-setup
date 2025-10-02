@@ -4,6 +4,9 @@ extra/sddm
 # Shell
 extra/fish
 
+# CLI Utils
+extra/eza
+
 # Terminal
 extra/foot
 extra/foot-terminfo
