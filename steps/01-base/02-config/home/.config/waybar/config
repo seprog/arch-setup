@@ -105,7 +105,7 @@
     "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
     //"min-length": 2,
     //"max-length": 2,
-    "on-click": "nm-connection-editor"
+    "on-click": "networkmanager_dmenu"
   },
   "custom/updates": {
     "format": "{} {icon}",
