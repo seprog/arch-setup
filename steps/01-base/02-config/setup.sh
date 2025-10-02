@@ -11,4 +11,5 @@ systemctl --user enable --now foot-server.service
 systemctl --user enable --now hyprpolkitagent.service
 systemctl --user enable --now waybar.service
 
+xdg-user-dirs-update
 chsh -s $(which fish)

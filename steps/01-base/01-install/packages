@@ -40,6 +40,9 @@ aur/waybar-module-pacman-updates-git
 extra/networkmanager
 extra/network-manager-applet
 
+# Default user folders
+extra/xdg-user-dirs
+
 # Clipboard
 extra/cliphist
 
