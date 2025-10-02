@@ -24,5 +24,5 @@ ln --symbolic \
   ~/home/Pictures/Wallpaper
 
 xdg-user-dirs-update
-chsh -s $(which fish)
+sudo chsh -s $(which fish) $USER
 rm ~/.bash*
