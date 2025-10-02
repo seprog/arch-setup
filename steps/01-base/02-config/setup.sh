@@ -11,6 +11,18 @@ systemctl --user enable foot-server.service
 systemctl --user enable hyprpolkitagent.service
 systemctl --user enable waybar.service
 
+mkdir --parents ~/home/Pictures/Wallpaper
+ln --symbolic \
+  /usr/share/Backgrounds/* \
+  /usr/share/backgrounds/* \
+  /usr/share/Background/* \
+  /usr/share/background/* \
+  /usr/share/Wallpapers/* \
+  /usr/share/wallpapers/* \
+  /usr/share/Wallpaper/* \
+  /usr/share/wallpaper/* \
+  ~/home/Pictures/Wallpaper
+
 xdg-user-dirs-update
 chsh -s $(which fish)
 rm ~/.bash*
