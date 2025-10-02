@@ -21,7 +21,7 @@ ln --symbolic \
   /usr/share/wallpapers/* \
   /usr/share/Wallpaper/* \
   /usr/share/wallpaper/* \
-  ~/home/Pictures/Wallpaper
+  ~/Pictures/Wallpaper
 
 xdg-user-dirs-update
 sudo chsh -s $(which fish) $USER
