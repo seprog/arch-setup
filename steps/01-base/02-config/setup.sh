@@ -10,3 +10,5 @@ sudo systemctl enable --now sddm.service
 systemctl --user enable --now foot-server.service
 systemctl --user enable --now hyprpolkitagent.service
 systemctl --user enable --now waybar.service
+
+chsh -s $(which fish)
