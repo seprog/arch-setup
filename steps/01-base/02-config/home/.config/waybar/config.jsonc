@@ -6,7 +6,18 @@
 
   "modules-left": [ "hyprland/workspaces" ],
   "modules-center": [ "clock" ],
-  "modules-right": [ "custom/updates", "pulseaudio", "backlight", "cpu", "memory", "custom/network_traffic", "tray", "battery", "idle_inhibitor","custom/power" ],
+  "modules-right": [
+    "custom/updates",
+    "pulseaudio",
+    "backlight",
+    "cpu",
+    "memory",
+    "custom/network_traffic",
+    "tray",
+    "battery",
+    "idle_inhibitor",
+    "custom/power"
+   ],
 
   "hyprland/workspaces": {
     "format": "{icon}",
