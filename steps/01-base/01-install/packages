@@ -36,7 +36,8 @@ extra/plasma-workspace-wallpapers
 extra/waybar
 aur/waybar-module-pacman-updates-git
 
-# Network Manager
+# Networking
+extra/networkmanager
 extra/network-manager-applet
 
 # Clipboard
