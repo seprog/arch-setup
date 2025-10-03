@@ -26,4 +26,3 @@ ln --symbolic \
 
 xdg-user-dirs-update
 sudo chsh -s $(which fish) $USER
-rm ~/.bash*

@@ -3,4 +3,5 @@
 
 SETUP_PATH=$PWD
 
+rm ~/.bash*
 reboot
