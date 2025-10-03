@@ -7,7 +7,6 @@ cp --recursive $SETUP_PATH/home/. ~
 
 sudo systemctl enable NetworkManager.service
 sudo systemctl enable sddm.service
-systemctl --user enable foot-server.service
 systemctl --user enable hypridle.service
 systemctl --user enable hyprpolkitagent.service
 systemctl --user enable waybar.service

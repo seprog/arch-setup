@@ -8,8 +8,7 @@ extra/fish
 extra/eza
 
 # Terminal
-extra/foot
-extra/foot-terminfo
+extra/kitty
 
 # File Manager
 extra/thunar
