@@ -32,7 +32,7 @@ window#waybar {
 
 
 #clock {
-  color:#a3be8c;
+  color: rgb({{ accent[1][8] }});
 }
 
 
