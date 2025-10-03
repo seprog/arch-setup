@@ -20,19 +20,19 @@ window#waybar {
 #workspaces button {
   padding: 2px 0px;
   border-bottom: 2px;
-  color: rgb({{ accent[0][8] }});
-  border-color: rgb({{ accent[0][2] }});
+  color: rgb({{ accents[0][8] }});
+  border-color: rgb({{ accents[0][2] }});
   border-style: solid;
   margin-top:2px;
 }
 
 #workspaces button.active {
-  border-color: rgb({{ accent[1][6] }});
+  border-color: rgb({{ accents[1][6] }});
 }
 
 
 #clock {
-  color: rgb({{ accent[1][8] }});
+  color: rgb({{ accents[1][8] }});
 }
 
 
@@ -40,7 +40,7 @@ window#waybar {
   padding: 0 3px;
   border-bottom: 2px;
   border-style: solid;
-  color: rgb({{ accent[0][8] }});
+  color: rgb({{ accents[0][8] }});
 }
 
 #battery.charging {
@@ -49,7 +49,7 @@ window#waybar {
 
 @keyframes blink {
   to {
-    color: rgb({{ accent[0][8] }});
+    color: rgb({{ accents[0][8] }});
   }
 }
 #battery.critical:not(.charging) {
@@ -63,5 +63,5 @@ window#waybar {
 
 
 #pulseaudio.muted {
-    color: rgb({{ accent[0][0] }});
+    color: rgb({{ accents[0][0] }});
 }
