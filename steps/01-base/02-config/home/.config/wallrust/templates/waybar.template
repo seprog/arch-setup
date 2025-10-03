@@ -4,11 +4,11 @@
   border: 0;
   border-radius: 0;
   padding: 0 0;
-  font-family:Symbols Nerd Font Mono;
+  font-family: Symbols Nerd Font Mono;
   font-size: 12px;
   margin-right: 4px;
   margin-left: 4px;
-  padding-bottom:2px;
+  padding-bottom: 2px;
 }
 
 window#waybar {
@@ -23,7 +23,7 @@ window#waybar {
   color: #{{ accents[0][8] }};
   border-color: #{{ accents[0][2] }};
   border-style: solid;
-  margin-top:2px;
+  margin-top: 2px;
 }
 
 #workspaces button.active {
@@ -63,5 +63,5 @@ window#waybar {
 
 
 #pulseaudio.muted {
-    color: #{{ accents[0][0] }};
+  color: #{{ accents[0][0] }};
 }
