@@ -1,3 +1,9 @@
+/*
+  ONLY INITIAL CONF
+  THIS FILE WILL BE OVERWRITTEN BY
+  ~/.config/wallrust/templates/waybar.template
+*/
+
 * {
   color: #eceff4;
   border: 0;
