@@ -12,7 +12,8 @@
 }
 
 window#waybar {
-  background: rgba({{ primary[0] }}5A);
+  background: #{{ primary[0] }};
+  opacity: 0.65;
   border-radius: 0px 0px 12px 12px;
 }
 
@@ -20,19 +21,19 @@ window#waybar {
 #workspaces button {
   padding: 2px 0px;
   border-bottom: 2px;
-  color: rgb({{ accents[0][8] }});
-  border-color: rgb({{ accents[0][2] }});
+  color: #{{ accents[0][8] }};
+  border-color: #{{ accents[0][2] }};
   border-style: solid;
   margin-top:2px;
 }
 
 #workspaces button.active {
-  border-color: rgb({{ accents[1][6] }});
+  border-color: #{{ accents[1][6] }};
 }
 
 
 #clock {
-  color: rgb({{ accents[1][8] }});
+  color: #{{ accents[1][8] }};
 }
 
 
@@ -40,7 +41,7 @@ window#waybar {
   padding: 0 3px;
   border-bottom: 2px;
   border-style: solid;
-  color: rgb({{ accents[0][8] }});
+  color: #{{ accents[0][8] }};
 }
 
 #battery.charging {
@@ -49,7 +50,7 @@ window#waybar {
 
 @keyframes blink {
   to {
-    color: rgb({{ accents[0][8] }});
+    color: #{{ accents[0][8] }};
   }
 }
 #battery.critical:not(.charging) {
@@ -63,5 +64,5 @@ window#waybar {
 
 
 #pulseaudio.muted {
-    color: rgb({{ accents[0][0] }});
+    color: #{{ accents[0][0] }};
 }
