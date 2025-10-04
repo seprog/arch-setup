@@ -1,6 +1,4 @@
 {# output: ~/.config/kitty/kitty.conf #}
 
-allow_remote_control yes
-
 foreground #{{ text[0] }}
 background #{{ primary[0] }}
