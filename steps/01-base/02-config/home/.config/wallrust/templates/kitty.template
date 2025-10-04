@@ -1,4 +1,4 @@
-{# output: ~/.conf/kitty/kitty.conf #}
+{# output: ~/.config/kitty/kitty.conf #}
 
 allow_remote_control yes
 
