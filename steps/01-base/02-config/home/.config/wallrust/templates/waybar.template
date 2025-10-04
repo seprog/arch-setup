@@ -61,3 +61,8 @@ window#waybar {
 #pulseaudio.source.source-muted {
   color: #{{ accents[0][4] }};
 }
+
+
+#custom-updates:not(.updated) {
+  color: orange;
+}
