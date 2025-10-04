@@ -2,5 +2,5 @@
 
 allow_remote_control yes
 
-foreground #{{ primary[0] }}
-background #{{ text[0] }}
+foreground #{{ text[0] }}
+background #{{ primary[0] }}
