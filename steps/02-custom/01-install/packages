@@ -30,11 +30,11 @@ extra/vlc
 extra/vlc-plugin-chromecast
 extra/yt-dlp
 multilib/steam
-aur/anki
-# TODO BROKEN: aur/atlauncher
-# TODO BROKEN: aur/bun
+aur/anki-bin
+aur/atlauncher-bin
+aur/bun-bin
 aur/paru
 aur/spotify
 aur/visual-studio-code-bin
-# TODO INSTALL WITH GUI: aur/zen-browser
+aur/zen-browser-bin
 aur/zoom
