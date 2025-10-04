@@ -1,4 +1,6 @@
 {# output: ~/.config/kitty/kitty.conf #}
 
+font_family CaskaydiaCove Nerd Font
+
 foreground #{{ text[0] }}
 background #{{ primary[0] }}
