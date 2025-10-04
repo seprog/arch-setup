@@ -64,6 +64,7 @@ extra/mako
 extra/pipewire
 extra/wireplumber
 extra/playerctl
+extra/pavucontrol
 
 # Screen
 extra/brightnessctl

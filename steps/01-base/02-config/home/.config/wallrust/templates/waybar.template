@@ -1,15 +1,14 @@
 {# output: ~/.config/waybar/style.css #}
 * {
-  color: #eceff4;
   border: 0;
   border-radius: 0;
   padding: 0 0;
-  font-family: Symbols Nerd Font Mono;
+  font-family: CaskaydiaCove Nerd Font;
   font-size: 12px;
   margin-right: 4px;
   margin-left: 4px;
-  padding-bottom: 2px;
 }
+
 
 window#waybar {
   background: {{ primary_rgba[0] | replace(from='\1', to='0.65') }};
@@ -18,16 +17,11 @@ window#waybar {
 
 
 #workspaces button {
-  padding: 2px 0px;
-  border-bottom: 2px;
-  color: #{{ accents[0][8] }};
-  border-color: #{{ accents[0][2] }};
-  border-style: solid;
-  margin-top: 2px;
+  color: #{{ accents[0][4] }};
 }
 
 #workspaces button.active {
-  border-color: #{{ accents[1][6] }};
+  color: #{{ accents[2][8] }};
 }
 
 
@@ -38,22 +32,20 @@ window#waybar {
 
 #battery, #cpu, #memory, #idle_inhibitor, #backlight, #pulseaudio, #tray, #custom-power, #custom-updates, #custom-network_traffic {
   padding: 0 3px;
-  border-bottom: 2px;
-  border-style: solid;
   color: #{{ accents[0][8] }};
 }
 
+
 #battery.charging {
-  color: #5ec055;
+  color: green;
 }
 
 @keyframes blink {
   to {
-    color: #{{ accents[0][8] }};
+    color: lime;
   }
 }
 #battery.critical:not(.charging) {
-  color: #fb1320;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -62,6 +54,10 @@ window#waybar {
 }
 
 
-#pulseaudio.muted {
-  color: #{{ accents[0][0] }};
+#pulseaudio.output.muted {
+  color: #{{ accents[0][4] }};
+}
+
+#pulseaudio.input.source-muted {
+  color: #{{ accents[0][4] }};
 }
