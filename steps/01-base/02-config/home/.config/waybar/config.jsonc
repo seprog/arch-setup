@@ -7,8 +7,8 @@
   "modules-center": [ "clock" ],
   "modules-right": [
     "custom/updates",
-    "pulseaudio#output",
-    "pulseaudio#input",
+    "pulseaudio#sink",
+    "pulseaudio#source",
     "backlight",
     "cpu",
     "memory",
@@ -109,7 +109,7 @@
     "format-ethernet": "{icon} {ifname} ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
     "min-length": 12
   },
-  "pulseaudio#output": {
+  "pulseaudio#sink": {
     "scroll-step": 1, // %, can be a float
     "format": "{icon} {volume}%",
     "format-muted": "",
@@ -127,7 +127,7 @@
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
     "on-click-right": "pavucontrol"
   },
-  "pulseaudio#input": {
+  "pulseaudio#source": {
     "scroll-step": 1, // %, can be a float
     "format": "{format_source}",
     "format-source": "",

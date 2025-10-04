@@ -54,10 +54,10 @@ window#waybar {
 }
 
 
-#pulseaudio.output.muted {
+#pulseaudio.sink.muted {
   color: #{{ accents[0][4] }};
 }
 
-#pulseaudio.input.source-muted {
+#pulseaudio.source.source-muted {
   color: #{{ accents[0][4] }};
 }
