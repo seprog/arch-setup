@@ -6,5 +6,7 @@ alias lla 'eza -la  --color=always --icons --group-directories-first --total-siz
 alias lt  'eza -laT --color=always --icons --group-directories-first --total-size'  # long, hidden, tree
 
 # colorize commands
-alias grep 'grep --color=auto'
-alias ip   'ip --color'
+alias pacman 'pacman --color=auto'
+alias paru   'paru   --color=auto'
+alias grep   'grep   --color=auto'
+alias ip     'ip     --color'
