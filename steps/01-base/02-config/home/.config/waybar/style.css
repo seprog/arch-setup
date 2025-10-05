@@ -5,15 +5,13 @@
 */
 
 * {
-  color: #eceff4;
   border: 0;
   border-radius: 0;
   padding: 0 0;
-  font-family: Symbols Nerd Font Mono;
+  font-family: CaskaydiaCove Nerd Font;
   font-size: 12px;
   margin-right: 4px;
   margin-left: 4px;
-  padding-bottom: 2px;
 }
 
 window#waybar {
