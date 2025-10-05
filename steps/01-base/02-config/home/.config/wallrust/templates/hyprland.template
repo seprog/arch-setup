@@ -91,4 +91,5 @@ master {
 # https://wiki.hypr.land/Configuring/Variables/#misc
 misc {
   disable_hyprland_logo = true # If true disables the random hyprland logo / anime girl background. :(
+  vrr = 1
 }
