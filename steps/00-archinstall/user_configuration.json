@@ -12,6 +12,11 @@
     "for user in $(ls /home); do echo 'git clone -b dev https://github.com/seprog/arch-setup ~/arch-setup && cd ~/arch-setup && ./install.sh; cd ~' >> /home/$user/.bash_profile; done"
   ],
   "kernels": [ "linux-zen" ],
+  "locale_config": {
+    "kb_layout": "de",
+    "sys_enc": "UTF-8",
+    "sys_lang": "en_US.UTF-8"
+  },
   "mirror_config": {
     "optional_repositories": [ "multilib" ]
   },
@@ -24,5 +29,6 @@
     "git"
   ],
   "parallel_downloads": 15,
-  "swap": true
+  "swap": true,
+  "timezone": "Europe/Berlin"
 }
