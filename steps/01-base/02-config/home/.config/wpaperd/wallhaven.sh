@@ -12,6 +12,7 @@ wh_order="asc"
 wh_colors=""
 wh_pages_start=1
 wh_pages_end=4
+wh_api_key=""
 
 output_dir="$HOME/Pictures/Wallpapers"
 
@@ -20,7 +21,7 @@ output_dir="$HOME/Pictures/Wallpapers"
 mkdir --parents "$output_dir"
 
 # Construct base url (not including pagination)
-wh_base_url="https://wallhaven.cc/search?"
+wh_base_url="https://wallhaven.cc/api/v1/search?"
 [[ -n "$wh_categories" ]] && wh_base_url+="categories=$wh_categories&"
 [[ -n "$wh_purity" ]] && wh_base_url+="purity=$wh_purity&"
 [[ -n "$wh_at_least" ]] && wh_base_url+="atleast=$wh_at_least&"
@@ -33,23 +34,16 @@ echo "$wh_base_url"
 
 # Pagination
 wh_page=$wh_pages_start
-while [ "$wh_page" -le "$wh_pages_end" ]; do
+while [ "$wh_page" -le "$wh_pages_end" ]
+do
   wh_url="${wh_base_url}page=$wh_page"
   echo "$wh_url"
 
   # MAIN COMMAND
-  # curl url
-  curl --silent --fail --location "$wh_url" | \
-  # grep wallhaven image id's
-  grep --only-matching --perl-regexp 'wallhaven\.cc/w/\K[^"]+' | \
-  # curl sub url
-  xargs -I {} \
-    curl --silent --fail --location "https://whvn.cc/{}" | \
-  # grep full size image path
-  grep --only-matching --perl-regexp 'wallhaven\.cc/full/\K[^"]+' | \
-  # wget full size image
-  xargs -I {} \
-    wget --quiet --show-progress --no-clobber --directory-prefix $output_dir "https://w.wallhaven.cc/full/{}"
+  curl --silent --fail --location --header "X-API-Key: $wh_api_key" "$wh_url" | \
+  grep --only-matching --perl-regexp '\"path:\"\K[^"]+' | \
+  xargs -P 8 \
+    wget --quiet --show-progress --no-clobber --directory-prefix $output_dir --header "X-API-Key: $wh_api_key"
 
   wh_page=$(($wh_page + 1))
 done
