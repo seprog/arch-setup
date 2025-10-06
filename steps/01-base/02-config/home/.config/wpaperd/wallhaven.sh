@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 
+
 # Config
 wh_categories="111"
 wh_purity="100"
@@ -36,16 +37,19 @@ while [ "$wh_page" -le "$wh_pages_end" ]; do
   wh_url="${wh_base_url}page=$wh_page"
   echo "$wh_url"
 
+  # MAIN COMMAND
   # curl url
   curl --silent --fail --location "$wh_url" | \
   # grep wallhaven image id's
   grep --only-matching --perl-regexp 'wallhaven\.cc/w/\K[^"]+' | \
   # curl sub url
-  xargs -I {} curl --silent --fail --location "https://whvn.cc/{}" | \
+  xargs -I {} \
+    curl --silent --fail --location "https://whvn.cc/{}" | \
   # grep full size image path
   grep --only-matching --perl-regexp 'wallhaven\.cc/full/\K[^"]+' | \
   # wget full size image
-  xargs -I {} wget --quiet --show-progress --no-clobber --directory-prefix $output_dir "https://w.wallhaven.cc/full/{}"
+  xargs -I {} \
+    wget --quiet --show-progress --no-clobber --directory-prefix $output_dir "https://w.wallhaven.cc/full/{}"
 
   wh_page=$(($wh_page + 1))
 done
