@@ -3,4 +3,4 @@
 
 SETUP_PATH=$PWD
 
-paru -S --needed --noconfirm $(grep "^[^#]" $SETUP_PATH/packages)
+paru -S --color=auto --needed --noconfirm $(grep "^[^#]" $SETUP_PATH/packages)
