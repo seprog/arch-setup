@@ -33,7 +33,7 @@ echo "$wh_base_url"
 # Pagination
 wh_page=$wh_pages_start
 while [ "$wh_page" -le "$wh_pages_end" ]; do
-  wh_url="$wh_base_url&page=$wh_page"
+  wh_url="${wh_base_url}page=$wh_page"
   echo "$wh_url"
 
   # curl url
