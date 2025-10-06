@@ -11,17 +11,7 @@ systemctl --user enable hypridle.service
 systemctl --user enable hyprpolkitagent.service
 systemctl --user enable waybar.service
 
-mkdir --parents ~/Pictures/Wallpaper
-ln --symbolic \
-  /usr/share/Backgrounds/* \
-  /usr/share/backgrounds/* \
-  /usr/share/Background/* \
-  /usr/share/background/* \
-  /usr/share/Wallpapers/* \
-  /usr/share/wallpapers/* \
-  /usr/share/Wallpaper/* \
-  /usr/share/wallpaper/* \
-  ~/Pictures/Wallpaper
+mkdir --parents ~/Pictures/Wallpapers
 
 xdg-user-dirs-update
 sudo chsh -s $(which fish) $USER

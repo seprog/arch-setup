@@ -1,5 +1,5 @@
 [default]
-path = "~/Pictures/Wallpaper"
+path = "~/Pictures/Wallpapers"
 duration = "20m"
 transition-time = 2000
 exec = "~/.config/wallrust/update-theme.sh"
