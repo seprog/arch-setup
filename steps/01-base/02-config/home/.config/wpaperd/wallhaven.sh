@@ -41,7 +41,7 @@ do
 
   # MAIN COMMAND
   curl --silent --fail --location --header "X-API-Key: $wh_api_key" "$wh_url" | \
-  grep --only-matching --perl-regexp '\"path\":\"\K[^"]+' | \
+  grep --only-matching --perl-regexp '"path":"\K[^"]+' | \
   xargs -P 8 \
     wget --quiet --show-progress --no-clobber --directory-prefix $output_dir
 
