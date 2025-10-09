@@ -11,10 +11,10 @@ tera_home=$XDG_CONFIG_HOME/hygge/tera/home
 
 shopt -s globstar dotglob
 
-# generate palette from wallpaper
+# --- generate palette from wallpaper ---
 wallrust --html --colors 3 --output-dir $wallrust_output_dir $wallpaper
 
-# write configs
+# --- write configs ---
 for tera_file in $tera_home/**/*.tera
 do
   tera_file_stripped=${tera_file%.tera}
@@ -24,8 +24,19 @@ do
     $wallrust_output_dir/wallrust.json
 done
 
-# reload applications
-# hyprland reloads automatically
-# hyprlock reloads automatically
+# --- reload applications ---
+# hyprland
+# reloads automatically
+
+# hyprlock
+# reloads automatically
+
+# waybar
 systemctl --user reload-or-restart waybar.service
+
+# kitty
 killall -SIGUSR1 kitty
+
+# mako
+# only needs killing, starts automatically on notification
+pkill mako

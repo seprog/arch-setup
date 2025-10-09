@@ -1,0 +1,26 @@
+border-size=1
+border-radius=6
+
+
+[urgency=low]
+font=Noto Sans 8
+background-color=#{{ primary[0] }}aa
+text-color=#{{ text[0] }}bb
+border-size=0
+default-timeout=5000
+
+
+[urgency=normal]
+font=Noto Sans 9
+background-color=#{{ primary[0] }}bb
+text-color=#{{ text[0] }}cc
+border-color=#{{ accents[0][6] }}dd
+default-timeout=15000
+
+
+[urgency=critical]
+font=Noto Sans 10
+background-color=#{{ primary[0] }}cc
+text-color=#{{ text[0] }}dd
+border-color=#ff0000ee
+default-timeout=0
