@@ -39,4 +39,4 @@ killall -SIGUSR1 kitty
 
 # mako
 # only needs killing, starts automatically on notification
-pkill mako
+killall mako
