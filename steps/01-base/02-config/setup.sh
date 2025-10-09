@@ -11,7 +11,7 @@ systemctl --user enable hypridle.service
 systemctl --user enable hyprpolkitagent.service
 systemctl --user enable waybar.service
 
-bash ~/.config/hygge/wallhaven.sh
+bash ~/.config/hygge/scripts/wallhaven.sh
 
 xdg-user-dirs-update
 sudo chsh -s $(which fish) $USER
