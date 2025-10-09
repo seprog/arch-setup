@@ -14,6 +14,8 @@ tera_home=$HOME/.config/hygge/tera/home
 
 shopt -s globstar dotglob
 
+[[ $monitor -ne "default" ]] && notify-send -u low "Current Wallpaper" "$monitor: $wallpaper"
+
 # --- generate palette from wallpaper ---
 wallrust --html --colors 3 --output-dir $wallrust_output_dir $wallpaper
 
@@ -28,11 +30,8 @@ do
     $wallrust_output_dir/wallrust.json
 done
 
-[[ $monitor -eq "default" ]] && exit
-notify-send -u low "Current Wallpaper" "$(wpaperctl get $monitor)"
-[[ $monitor -ne $active_monitor ]] && exit
-
 # --- reload applications ---
+[[ $monitor -ne $active_monitor ]] && exit
 # hyprland
 # reloads automatically
 
@@ -48,6 +47,3 @@ killall -SIGUSR1 kitty
 # mako
 # only needs killing, starts automatically on notification
 killall mako
-
-# --- notify about change ---
-notify-send -u low "Reloaded Theme"
