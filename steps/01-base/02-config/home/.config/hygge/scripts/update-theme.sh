@@ -5,8 +5,8 @@ monitor=$1
 wallpaper=$2
 
 
-wallrust_output_dir=$XDG_STATE_HOME/hygge/$monitor
-tera_home=$XDG_CONFIG_HOME/hygge/tera/home
+wallrust_output_dir=$HOME/.local/state/hygge/$monitor
+tera_home=$HOME/.config/hygge/tera/home
 
 
 shopt -s globstar dotglob
