@@ -12,6 +12,7 @@ systemctl --user enable hyprpolkitagent.service
 systemctl --user enable waybar.service
 
 bash ~/.config/hygge/scripts/wallhaven.sh
+bash ~/.config/hygge/scripts/update-theme.sh default $SETUP_PATH/wallrust-gradient.svg
 
 xdg-user-dirs-update
 sudo chsh -s $(which fish) $USER

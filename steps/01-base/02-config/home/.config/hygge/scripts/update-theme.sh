@@ -33,7 +33,7 @@ done
 # reloads automatically
 
 # waybar
-systemctl --user reload-or-restart waybar.service
+systemctl --user reload waybar.service
 
 # kitty
 killall -SIGUSR1 kitty
