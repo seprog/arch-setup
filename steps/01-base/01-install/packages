@@ -84,6 +84,5 @@ extra/qt6ct
 extra/hyprland-qt-support
 
 # Fonts
-extra/ttf-jetbrains-mono-nerd
 extra/ttf-cascadia-code-nerd
 extra/noto-fonts
