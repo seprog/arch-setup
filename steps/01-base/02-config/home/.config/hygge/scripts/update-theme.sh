@@ -50,4 +50,4 @@ then
 fi
 
 # --- notify about change ---
-notify-send -u low "Current Wallpaper" "$monitor: $wallpaper"
+notify-send -u low "Current Wallpaper" "$(wpaperctl get-all)"
