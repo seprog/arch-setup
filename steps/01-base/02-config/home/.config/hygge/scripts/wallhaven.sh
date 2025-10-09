@@ -49,4 +49,4 @@ do
 done
 
 # Pre hashing
-ls -1 $output_dir | xargs -P 8 -I {} bash ~/.config/hygge/scripts/generate-theme.sh {}
+ls -1 $output_dir | xargs -P 8 -I {} bash ~/.config/hygge/scripts/generate-theme.sh "$output_dir/"{}
