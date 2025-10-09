@@ -14,11 +14,11 @@ tera_home=$HOME/.config/hygge/tera/home
 
 shopt -s globstar dotglob
 
-# --- generate palette from wallpaper ---
-wallrust --html --colors 3 --output-dir $wallrust_output_dir $wallpaper
-
 if [ $monitor = $active_monitor ] || [ $monitor = "default" ]
 then
+  # --- generate palette from wallpaper ---
+  wallrust --html --colors 3 --output-dir $wallrust_output_dir $wallpaper
+
   # --- write configs ---
   for tera_file in $tera_home/**/*.tera
   do
