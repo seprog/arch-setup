@@ -2,4 +2,4 @@
 path = "~/Pictures/Wallpapers"
 duration = "20m"
 transition-time = 2000
-exec = "~/.config/hygge/scripts/update-theme.sh"
+exec = "~/.config/hygge/scripts/post-wallpaper-change.sh"

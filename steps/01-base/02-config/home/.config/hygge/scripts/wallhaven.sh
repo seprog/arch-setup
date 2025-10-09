@@ -47,3 +47,6 @@ do
 
   wh_page=$(($wh_page + 1))
 done
+
+# Pre hashing
+ls -1 $output_dir | xargs -P 8 -I {} bash ~/.config/hygge/scripts/generate_theme.sh {}
