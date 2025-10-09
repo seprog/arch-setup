@@ -12,9 +12,11 @@ shopt -s globstar dotglob
 # generate palette of wallpaper and write configs
 wallrust --html --colors 3 --output-dir $wallrust_output_dir $wallpaper
 
-ls -aR $tera_home/**/*.tera | \
-xargs -I {} \
-  tera --template {} --out $(echo {} | sed "s|$tera_home|$HOME|" | sed "s|.tera||") $wallrust_output_dir/wallrust.json
+for tera_file in $tera_home/**/*.tera
+do
+  tera_file_stripped=${tera_file%.tera}
+  tera --template $tera_file --out ${tera_file_stripped/$tera_home/$HOME} $wallrust_output_dir/wallrust.json
+done
 
 # reload applications
 # hyprland reloads automatically
