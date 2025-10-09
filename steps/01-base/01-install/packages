@@ -57,6 +57,9 @@ extra/uwsm
 extra/libnewt
 extra/xdg-desktop-portal-hyprland
 
+# Monitors
+extra/nwg-displays
+
 # Notification Daemon
 extra/mako
 
