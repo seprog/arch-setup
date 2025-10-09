@@ -17,7 +17,7 @@ shopt -s globstar dotglob
 # --- generate palette from wallpaper ---
 wallrust --html --colors 3 --output-dir $wallrust_output_dir $wallpaper
 
-if [[[[ $monitor -eq $active_monitor ]] || [[ $monitor -eq "default" ]]]]
+if [ $monitor = $active_monitor ] || [ $monitor = "default" ]
 then
   # --- write configs ---
   for tera_file in $tera_home/**/*.tera
@@ -29,7 +29,7 @@ then
       --out ${tera_file_stripped/$tera_home/$HOME} \
       $wallrust_output_dir/wallrust.json
   done
-  [[ $monitor -eq "default" ]] && exit
+  [ $monitor = "default" ] && exit
 
   # --- reload applications ---
   # hyprland
