@@ -25,6 +25,8 @@ do
     $wallrust_output_dir/wallrust.json
 done
 
+[[ $monitor -eq "default" ]] && exit
+
 # --- reload applications ---
 # hyprland
 # reloads automatically
