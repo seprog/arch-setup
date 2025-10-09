@@ -14,40 +14,39 @@ tera_home=$HOME/.config/hygge/tera/home
 
 shopt -s globstar dotglob
 
-if [ $monitor = $active_monitor ] || [ $monitor = "default" ]
-then
-  # --- generate palette from wallpaper ---
-  wallrust --html --colors 3 --output-dir $wallrust_output_dir $wallpaper
+[ $monitor != $active_monitor ] && [ $monitor != "default" ] && exit
 
-  # --- write configs ---
-  for tera_file in $tera_home/**/*.tera
-  do
-    tera_file_stripped=${tera_file%.tera}
-    mkdir --parents $(dirname ${tera_file_stripped/$tera_home/$HOME})
-    tera \
-      --template $tera_file \
-      --out ${tera_file_stripped/$tera_home/$HOME} \
-      $wallrust_output_dir/wallrust.json
-  done
-  [ $monitor = "default" ] && exit
+# --- generate palette from wallpaper ---
+wallrust --html --colors 3 --output-dir $wallrust_output_dir $wallpaper
 
-  # --- reload applications ---
-  # hyprland
-  # reloads automatically
+# --- write configs ---
+for tera_file in $tera_home/**/*.tera
+do
+  tera_file_stripped=${tera_file%.tera}
+  mkdir --parents $(dirname ${tera_file_stripped/$tera_home/$HOME})
+  tera \
+    --template $tera_file \
+    --out ${tera_file_stripped/$tera_home/$HOME} \
+    $wallrust_output_dir/wallrust.json
+done
+[ $monitor = "default" ] && exit
 
-  # hyprlock
-  # reloads automatically
+# --- reload applications ---
+# hyprland
+# reloads automatically
 
-  # waybar
-  systemctl --user reload waybar.service
+# hyprlock
+# reloads automatically
 
-  # kitty
-  killall -SIGUSR1 kitty
+# waybar
+systemctl --user reload waybar.service
 
-  # mako
-  # only needs killing, starts automatically on notification
-  killall mako
-fi
+# kitty
+killall -SIGUSR1 kitty
+
+# mako
+# only needs killing, starts automatically on notification
+killall mako
 
 # --- notify about change ---
-notify-send -u low "Current Wallpaper" "$(wpaperctl get-all)"
+  notify-send -u low "Current Wallpaper" "$(wpaperctl get-all)"
