@@ -5,6 +5,9 @@ monitor=$1
 wallpaper=$2
 
 
+active_monitor="HDMI-A-1"
+
+
 wallrust_output_dir=$HOME/.local/state/hygge/$monitor
 tera_home=$HOME/.config/hygge/tera/home
 
@@ -26,6 +29,8 @@ do
 done
 
 [[ $monitor -eq "default" ]] && exit
+notify-send -u low "Current Wallpaper" "$(wpaperctl get $monitor)"
+[[ $monitor -ne $active_monitor ]] && exit
 
 # --- reload applications ---
 # hyprland
@@ -45,4 +50,4 @@ killall -SIGUSR1 kitty
 killall mako
 
 # --- notify about change ---
-notify-send -u low "Current Wallpaper" "$(wpaperctl get $monitor)"
+notify-send -u low "Reloaded Theme"
