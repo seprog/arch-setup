@@ -1,4 +1,3 @@
-{# output: ~/.config/hypr/hyprland/look-and-feel.conf #}
 # https://wiki.hypr.land/Configuring/Variables/#general
 general {
   gaps_in = 4
