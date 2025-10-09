@@ -30,7 +30,7 @@ window#waybar {
 }
 
 
-#battery, #cpu, #memory, #idle_inhibitor, #backlight, #pulseaudio, #tray, #custom-power, #custom-updates, #custom-network_traffic {
+#battery, #cpu, #memory, #idle-inhibitor, #backlight, #pulseaudio, #tray, #custom-power, #custom-updates, #custom-network-traffic {
   padding: 0 3px;
   color: #{{ accents[0][8] }};
 }
