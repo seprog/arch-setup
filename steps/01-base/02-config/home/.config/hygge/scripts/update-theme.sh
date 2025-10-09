@@ -41,3 +41,6 @@ killall -SIGUSR1 kitty
 # mako
 # only needs killing, starts automatically on notification
 killall mako
+
+# --- notify about change ---
+notify-send -u low "Current Wallpaper" "$(wpaperctl get $monitor)"
