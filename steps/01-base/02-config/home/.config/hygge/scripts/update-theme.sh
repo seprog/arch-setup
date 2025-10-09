@@ -17,7 +17,7 @@ shopt -s globstar dotglob
 [ $monitor != $active_monitor ] && [ $monitor != "default" ] && exit
 
 # --- generate palette from wallpaper ---
-wallrust --html --colors 3 --output-dir $wallrust_output_dir $wallpaper
+wallrust --colors 3 --output-dir $wallrust_output_dir $wallpaper
 
 # --- write configs ---
 for tera_file in $tera_home/**/*.tera
