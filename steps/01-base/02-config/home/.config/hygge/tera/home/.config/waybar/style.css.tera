@@ -1,7 +1,7 @@
 * {
   border: 0;
-  border-radius: 0;
-  padding: 0 0;
+  border-radius: 0 0 8px 8px;
+  padding: 0 8px;
   font-family: Noto Nerd Font;
   font-size: 12px;
   margin-right: 4px;
@@ -10,28 +10,44 @@
 
 
 window#waybar {
-  background: linear-gradient(90deg, {{ primary_rgba[0] | replace(from='\1', to='0.65') }},{{ primary_rgba[1] | replace(from='\1', to='0.85') }},{{ primary_rgba[0] | replace(from='\1', to='0.65') }});
-  border-radius: 0px 0px 12px 12px;
+  background: rgba(0,0,0,0);
 }
 
 
+#workspaces * {
+  padding: 0 0;
+}
+
 #workspaces button {
   color: #{{ accents[0][4] }};
+  background: {{ primary_rgba[0] | replace(from='\1', to='0.65') }};
 }
 
 #workspaces button.active {
   color: #{{ accents[2][8] }};
+  background: {{ primary_rgba[2] | replace(from='\1', to='0.85') }};
+}
+
+#workspaces .taskbar-window {
+  margin: 0 0;
+}
+
+
+#submap {
+  color: #{{ accents[1][8] }};
+  background: {{ primary_rgba[1] | replace(from='\1', to='0.85') }};
 }
 
 
 #clock {
   color: #{{ accents[1][8] }};
+  background: {{ primary_rgba[1] | replace(from='\1', to='0.65') }};
 }
 
 
 #battery, #cpu, #memory, #idle-inhibitor, #backlight, #pulseaudio, #tray, #custom-power, #custom-updates, #custom-network-traffic {
-  padding: 0 3px;
   color: #{{ accents[0][8] }};
+  background: {{ primary_rgba[0] | replace(from='\1', to='0.65') }};
 }
 
 
