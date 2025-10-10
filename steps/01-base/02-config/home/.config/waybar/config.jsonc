@@ -60,7 +60,7 @@
   },
   "clock#clock": {
     "tooltip-format": "<big>{:%H:%M:%S}</big>",
-    "format": "{%H:%M}",
+    "format": "{:%H:%M}",
     "interval": 1
   },
   "cpu": {
