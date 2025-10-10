@@ -36,12 +36,12 @@ window#waybar {
 
 
 #battery.charging {
-  color: green;
+  color: lime;
 }
 
 @keyframes blink {
   to {
-    color: lime;
+    color: red;
   }
 }
 #battery.critical:not(.charging) {
