@@ -5,6 +5,9 @@ alias ll  'eza -l   --color=always --icons --group-directories-first --total-siz
 alias lla 'eza -la  --color=always --icons --group-directories-first --total-size'  # long, hidden
 alias lt  'eza -laT --color=always --icons --group-directories-first --total-size'  # long, hidden, tree
 
+# cat => bat
+alias cat 'bat --style full'
+
 # colorize commands
 alias pacman 'pacman --color=auto'
 alias paru   'paru   --color=auto'

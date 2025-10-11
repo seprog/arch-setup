@@ -6,6 +6,7 @@ extra/fish
 
 # CLI Utils
 extra/eza
+extra/bat
 
 # Terminal
 extra/kitty
