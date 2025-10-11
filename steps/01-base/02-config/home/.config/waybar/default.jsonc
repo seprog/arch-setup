@@ -19,6 +19,7 @@
     "backlight",
     "cpu",
     "memory",
+    "disk",
     "custom/network-traffic",
     "tray",
     "battery",
@@ -50,26 +51,30 @@
   },
   "clock#date": {
     "tooltip-format": "<big>{:%A, %d. %B %Y }</big>\n<tt><small>{calendar}</small></tt>",
-    "format": "{:%A, %d. %b}",
+    "format": " {:%A, %d. %b}",
     "interval": 60
   },
   "clock#clock": {
     "tooltip-format": "<big>{:%H:%M:%S}</big>",
-    "format": "{:%H:%M}",
+    "format": "{:%H:%M} ",
     "interval": 1
   },
   "cpu": {
-    "format": "🖳{usage}%"
+    "format": " {usage}%"
   },
   "memory": {
-    "format": "🖴 {: >3}%"
+    "format": " {percentage: >3}%"
+  },
+  "disk": {
+    "format": "󰋊 {percentage_used: >3}%"
   },
   "backlight": {
     // "device": "acpi_video1",
     "format": "{icon} {percent: >3}%",
-    "format-icons": ["", ""],
+    "format-icons": ["󰃚", "󰃛", "󰃜", "󰃝", "󰃞", "󰃟", "󰃠"],
     "on-scroll-down": "brightnessctl -c backlight set 1%-",
-    "on-scroll-up": "brightnessctl -c backlight set +1%"
+    "on-scroll-up": "brightnessctl -c backlight set +1%",
+    "tooltip": false
   },
   "battery": {
     "states": {
