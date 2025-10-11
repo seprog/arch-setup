@@ -1,5 +1,5 @@
-{% if monitors %}
 [
+{% if monitors %}
 {% for monitor, values in monitors %}
   {
     "output": "{{ monitor }}",
@@ -7,5 +7,9 @@
     "include": "~/.config/waybar/default.jsonc"
   },
 {% endfor %}
-]
+{% else %}
+  {
+    "include": "~/.config/waybar/default.jsonc"
+  }
 {% endif %}
+]
