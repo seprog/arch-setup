@@ -22,7 +22,7 @@
     "custom/network-traffic",
     "tray",
     "battery",
-    "idle-inhibitor",
+    "idle_inhibitor",
     "custom/power"
    ],
 
@@ -38,7 +38,7 @@
   "hyprland/submap": {
     "tooltip": false
   },
-  "idle-inhibitor": {
+  "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
       "activated": "",
