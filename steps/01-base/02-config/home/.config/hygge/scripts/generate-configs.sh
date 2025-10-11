@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 
-wallrust_json=$1
+theme_json=$1
 tera_home=$2
 
 
@@ -16,5 +16,5 @@ do
   tera \
     --template $tera_file \
     --out ${tera_file_stripped/$tera_home/$HOME} \
-    $wallrust_json
+    $theme_json
 done
