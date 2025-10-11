@@ -11,7 +11,7 @@ wh_sorting="toplist"
 wh_order="asc"
 wh_colors=""
 wh_pages_start=1
-wh_pages_end=4
+wh_pages_end=8
 wh_api_key=""
 
 output_dir="$HOME/Pictures/Wallpapers"
@@ -42,11 +42,8 @@ do
   # MAIN COMMAND
   curl --silent --fail --location --header "X-API-Key: $wh_api_key" "$wh_url" | \
   grep --only-matching --perl-regexp '"path":"\K[^"]+' | \
-  xargs -P 8 \
+  xargs -P 0 \
     wget --quiet --show-progress --no-clobber --directory-prefix $output_dir
 
   wh_page=$(($wh_page + 1))
 done
-
-# Pre hashing
-#ls -1 $output_dir | xargs -P 8 -I {} bash ~/.config/hygge/scripts/generate-theme.sh "$output_dir/"{}
