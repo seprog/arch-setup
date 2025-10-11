@@ -59,6 +59,7 @@ extra/libnewt
 extra/xdg-desktop-portal-hyprland
 
 # Monitors
+extra/brightnessctl
 extra/nwg-displays
 
 # Notification Daemon
@@ -69,9 +70,6 @@ extra/pipewire
 extra/wireplumber
 extra/playerctl
 extra/pavucontrol
-
-# Screen
-extra/brightnessctl
 
 # Screenshot
 extra/hyprshot

@@ -11,11 +11,11 @@ active_monitor="HDMI-A-1"
 theme_dir=$HOME/.local/state/hygge/theme
 
 
-bash $HOME/.config/hygge/scripts/generate-theme.sh $wallpaper $theme_dir/screens/$monitor
+bash $HOME/.config/hygge/scripts/generate-theme.sh $wallpaper $theme_dir/monitors/$monitor
 jq -n \
-  --argjson active_content "$(cat $theme_dir/screens/$active_monitor/wallrust.json)" \
-  '{ "screens": ( reduce inputs as $file ( {}; . + { ( ($file | input_filename | split("/") | .[-2]) ): $file } ) ) } + $active_content' \
-  $theme_dir/screens/*/wallrust.json > $theme_dir/theme.json
+  --argjson active_content "$(cat $theme_dir/monitors/$active_monitor/wallrust.json)" \
+  '{ "monitors": ( reduce inputs as $file ( {}; . + { ( ($file | input_filename | split("/") | .[-2]) ): $file } ) ) } + $active_content' \
+  $theme_dir/monitors/*/wallrust.json > $theme_dir/theme.json
 
 [ $monitor != $active_monitor ] && exit
 
