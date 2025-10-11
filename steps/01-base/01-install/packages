@@ -40,7 +40,8 @@ aur/teracli
 extra/waybar
 aur/waybar-module-pacman-updates-git
 
-# Networking
+# Networking & Bluetooth
+extra/blueman
 extra/networkmanager
 extra/network-manager-applet
 
