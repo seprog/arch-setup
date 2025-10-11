@@ -11,7 +11,9 @@ extra/eza
 extra/kitty
 
 # File Manager
+extra/gvfs
 extra/thunar
+extra/tumbler
 
 # Logout
 aur/wlogout
