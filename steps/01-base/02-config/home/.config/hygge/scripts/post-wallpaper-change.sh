@@ -17,7 +17,7 @@ then
   tera \
       --template $HOME/.config/hygge/tera/home/.config/waybar/style.css.tera \
       --out $HOME/.config/waybar/style.css \
-      --env-key "monitor=$monitor" \
+      --env=monitor=$monitor \
       $wallrust_output_dir/wallrust.json
   systemctl --user reload waybar.service
   exit
