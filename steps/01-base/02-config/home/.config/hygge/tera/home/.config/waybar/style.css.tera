@@ -1,3 +1,4 @@
+{% if monitors %}
 {% for monitor, values in monitors %}
 * {
   border: 0;
@@ -88,3 +89,4 @@ window#waybar {
   color: orange;
 }
 {% endfor %}
+{% endif %}

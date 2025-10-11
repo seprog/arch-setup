@@ -15,6 +15,7 @@ animations {
   enabled = true
 }
 
+{% if monitors %}
 {% for monitor, values in monitors %}
 input-field {
   monitor = {{ monitor }}
@@ -60,3 +61,4 @@ label {
   valign = center
 }
 {% endfor %}
+{% endif %}
