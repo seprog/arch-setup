@@ -16,9 +16,6 @@ jq -n \
   --argjson active_content "$(cat $theme_dir/monitors/$active_monitor/wallrust.json)" \
   '{ "monitors": ( reduce inputs as $file ( {}; . + { ( ($file | input_filename | split("/") | .[-2]) ): $file } ) ) } + $active_content' \
   $theme_dir/monitors/*/wallrust.json > $theme_dir/theme.json
-
-[ $monitor != $active_monitor ] && exit
-
 bash $HOME/.config/hygge/scripts/generate-configs.sh $theme_dir/theme.json
 bash $HOME/.config/hygge/scripts/reload-configs.sh
 
