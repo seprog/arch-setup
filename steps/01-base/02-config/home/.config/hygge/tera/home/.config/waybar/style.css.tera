@@ -1,88 +1,91 @@
-* {
-  border: 0;
-  border-radius: 0 0 8px 8px;
-  padding: 0 8px;
-  font-family: Noto Nerd Font;
-  font-size: 12px;
-  margin-right: 4px;
-  margin-left: 4px;
-}
-
-
-window#waybar {
-  background: rgba(0,0,0,0);
-}
-
-
-#workspaces * {
-  padding: 0 0;
-}
-
-#workspaces button {
-  color: #{{ accents[0][4] }};
-  background: {{ primary_rgba[0] | replace(from='\1', to='0.65') }};
-}
-
-#workspaces button.visible:not(.active) {
-  color: #{{ accents[1][8] }};
-  background: {{ primary_rgba[1] | replace(from='\1', to='0.65') }};
-}
-
-#workspaces button.active {
-  color: #{{ accents[2][8] }};
-  background: {{ primary_rgba[2] | replace(from='\1', to='0.85') }};
-}
-
-#workspaces .taskbar-window {
-  margin: 0 0;
-}
-
-
-#submap {
-  color: #{{ accents[1][8] }};
-  background: {{ primary_rgba[1] | replace(from='\1', to='0.85') }};
-}
-
-
-#clock {
-  color: #{{ accents[1][8] }};
-  background: {{ primary_rgba[1] | replace(from='\1', to='0.65') }};
-}
-
-
-#battery, #cpu, #memory, #idle-inhibitor, #backlight, #pulseaudio, #tray, #custom-power, #custom-updates, #custom-network-traffic {
-  color: #{{ accents[0][8] }};
-  background: {{ primary_rgba[0] | replace(from='\1', to='0.65') }};
-}
-
-
-#battery.charging {
-  color: lime;
-}
-
-@keyframes blink {
-  to {
-    color: red;
+{% for monitor, values in monitors %}
+.{{ monitor }} {
+  * {
+    border: 0;
+    border-radius: 0 0 8px 8px;
+    padding: 0 8px;
+    font-family: Noto Nerd Font;
+    font-size: 12px;
+    margin-right: 4px;
+    margin-left: 4px;
   }
-}
-#battery.critical:not(.charging) {
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
 
 
-#pulseaudio.sink.muted {
-  color: #{{ accents[0][4] }};
-}
-
-#pulseaudio.source.source-muted {
-  color: #{{ accents[0][4] }};
-}
+  window#waybar {
+    background: rgba(0,0,0,0);
+  }
 
 
-#custom-updates:not(.updated) {
-  color: orange;
+  #workspaces * {
+    padding: 0 0;
+  }
+
+  #workspaces button {
+    color: #{{ values.accents[0][4] }};
+    background: {{ values.primary_rgba[0] | replace(from='\1', to='0.65') }};
+  }
+
+  #workspaces button.visible:not(.active) {
+    color: #{{ values.accents[1][8] }};
+    background: {{ values.primary_rgba[1] | replace(from='\1', to='0.65') }};
+  }
+
+  #workspaces button.active {
+    color: #{{ values.accents[2][8] }};
+    background: {{ values.primary_rgba[2] | replace(from='\1', to='0.85') }};
+  }
+
+  #workspaces .taskbar-window {
+    margin: 0 0;
+  }
+
+
+  #submap {
+    color: #{{ values.accents[1][8] }};
+    background: {{ values.primary_rgba[1] | replace(from='\1', to='0.85') }};
+  }
+
+
+  #clock {
+    color: #{{ values.accents[1][8] }};
+    background: {{ values.primary_rgba[1] | replace(from='\1', to='0.65') }};
+  }
+
+
+  #battery, #cpu, #memory, #idle-inhibitor, #backlight, #pulseaudio, #tray, #custom-power, #custom-updates, #custom-network-traffic {
+    color: #{{ values.accents[0][8] }};
+    background: {{ values.primary_rgba[0] | replace(from='\1', to='0.65') }};
+  }
+
+
+  #battery.charging {
+    color: lime;
+  }
+
+  @keyframes blink {
+    to {
+      color: red;
+    }
+  }
+  #battery.critical:not(.charging) {
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+
+  #pulseaudio.sink.muted {
+    color: #{{ values.accents[0][4] }};
+  }
+
+  #pulseaudio.source.source-muted {
+    color: #{{ values.accents[0][4] }};
+  }
+
+
+  #custom-updates:not(.updated) {
+    color: orange;
+  }
 }

@@ -1,0 +1,9 @@
+[
+{% for monitor, values in monitors %}
+  {
+    "output": "{{ monitor }}",
+    "name": "{{ monitor }}",
+    "include": "~/.config/waybar/default.jsonc"
+  },
+{% endfor %}
+]
