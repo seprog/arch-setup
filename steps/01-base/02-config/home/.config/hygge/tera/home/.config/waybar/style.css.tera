@@ -52,7 +52,16 @@ window#waybar {
 }
 
 
-.{{ monitor }} #battery, #cpu, #memory, #idle-inhibitor, #backlight, #pulseaudio, #tray, #custom-power, #custom-updates, #custom-network-traffic {
+.{{ monitor }} #battery,
+.{{ monitor }} #cpu,
+.{{ monitor }} #memory,
+.{{ monitor }} #idle-inhibitor,
+.{{ monitor }} #backlight,
+.{{ monitor }} #pulseaudio,
+.{{ monitor }} #tray,
+.{{ monitor }} #custom-power,
+.{{ monitor }} #custom-updates,
+.{{ monitor }} #custom-network-traffic {
   color: #{{ values.accents[0][8] }};
   background: {{ values.primary_rgba[0] | replace(from='\1', to='0.65') }};
 }
