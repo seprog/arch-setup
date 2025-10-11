@@ -29,6 +29,7 @@
   "hyprland/workspaces": {
     "format": "{icon} {windows}",
     "show-special": true,
+    "all-outputs": true,
     "workspace-taskbar": {
       "enable": true,
       "icon-size": 12

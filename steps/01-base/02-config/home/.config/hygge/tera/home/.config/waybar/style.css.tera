@@ -23,6 +23,11 @@ window#waybar {
   background: {{ primary_rgba[0] | replace(from='\1', to='0.65') }};
 }
 
+#workspaces button.visible:not(.active) {
+  color: #{{ accents[1][8] }};
+  background: {{ primary_rgba[1] | replace(from='\1', to='0.65') }};
+}
+
 #workspaces button.active {
   color: #{{ accents[2][8] }};
   background: {{ primary_rgba[2] | replace(from='\1', to='0.85') }};
