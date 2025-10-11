@@ -6,6 +6,9 @@ active_monitor="HDMI-A-1"
 
 theme_dir=$HOME/.local/state/hygge/theme
 
+[[ -n $1 ]] && [ $1 != $active_monitor ] && exit
+sleep 1
+
 wpaperctl get-all | \
 while IFS=": " read -r monitor wallpaper
 do
