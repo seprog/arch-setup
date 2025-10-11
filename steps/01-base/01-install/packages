@@ -28,6 +28,7 @@ extra/gsettings-desktop-schemas
 extra/nwg-look
 
 # Wallpaper
+extra/jq
 extra/wget
 extra/wpaperd
 aur/wallrust-bin
