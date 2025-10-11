@@ -43,8 +43,7 @@
     "format-icons": {
       "activated": "",
       "deactivated": ""
-    },
-    "on-click":"exec ~/.config/waybar/scripts/idle-inhibitor.sh"
+    }
   },
   "tray": {
     "icon-size": 16
