@@ -16,6 +16,5 @@ do
   tera \
     --template $tera_file \
     --out ${tera_file_stripped/$tera_home/$HOME} \
-    --env=monitor=HDMI-A-1\
     $wallrust_json
 done

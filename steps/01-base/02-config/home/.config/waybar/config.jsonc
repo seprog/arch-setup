@@ -1,5 +1,4 @@
 {
-  "output": {{ monitor }},
   "layer": "top",
   "position": "top",
   "margin": "0 64 0 64",
