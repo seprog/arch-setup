@@ -8,7 +8,7 @@ wallpaper=$2
 active_monitor="HDMI-A-1"
 
 
-wallrust_output_dir=$HOME/.local/state/hygge/theme/$wallpaper
+wallrust_output_dir=$HOME/.local/state/hygge/theme/$monitor
 
 
 bash $HOME/.config/hygge/scripts/generate-theme.sh $wallpaper $wallrust_output_dir
