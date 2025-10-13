@@ -5,6 +5,7 @@ extra/noto-fonts-extra
 # Other
 core/man-db
 core/python
+extra/btop
 extra/devtools
 extra/discord
 extra/docker
