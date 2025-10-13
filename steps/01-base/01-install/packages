@@ -70,7 +70,7 @@ extra/nwg-displays
 extra/mako
 
 # Audio
-extra/pipewire
+extra/pipewire-audio
 extra/wireplumber
 extra/playerctl
 extra/pavucontrol
