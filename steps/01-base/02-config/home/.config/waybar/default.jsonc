@@ -1,7 +1,6 @@
 {
   "layer": "top",
   "position": "top",
-  "margin": "0 64 0 64",
   "fixed-center": true,
 
   "modules-left": [
