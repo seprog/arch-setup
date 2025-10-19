@@ -52,7 +52,7 @@ window#waybar {
 }
 
 
-.{{ monitor }} #custom-updates
+.{{ monitor }} #custom-updates,
 .{{ monitor }} #pulseaudio,
 .{{ monitor }} #tray,
 .{{ monitor }} #battery,
@@ -190,7 +190,7 @@ window#waybar {
 }
 
 
-#custom-updates
+#custom-updates,
 #pulseaudio,
 #tray,
 #battery,
