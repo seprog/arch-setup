@@ -98,6 +98,14 @@ window#waybar {
 }
 
 
+#audio, #audio * {
+  padding: 0 0;
+}
+
+#audio label {
+  padding: 0 8px;
+}
+
 .{{ monitor }} #pulseaudio.sink.muted {
   color: #{{ values.accents[0][4] }};
 }
@@ -227,6 +235,14 @@ window#waybar {
   animation-direction: alternate;
 }
 
+
+#audio, #audio * {
+  padding: 0 0;
+}
+
+#audio label {
+  padding: 0 8px;
+}
 
 #pulseaudio.sink.muted {
   color: #{{ accents[0][4] }};

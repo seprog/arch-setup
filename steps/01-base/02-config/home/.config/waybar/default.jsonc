@@ -14,8 +14,7 @@
   ],
   "modules-right": [
     "custom/updates",
-    "pulseaudio#sink",
-    "pulseaudio#source",
+    "group/audio",
     "group/system-resources",
     "tray",
     "group/battery-and-light",
@@ -83,6 +82,16 @@
     },
     "exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 7200 --network-interval-seconds",
     "on-click": "kitty paru -Syu --color=auto"
+  },
+  "group/audio": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "pulseaudio#sink",
+      "pulseaudio#source"
+    ]
   },
   "pulseaudio#sink": {
     "scroll-step": 1, // %, can be a float
