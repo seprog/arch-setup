@@ -105,19 +105,23 @@
     ]
   },
   "cpu": {
-    "format": " {usage}%"
+    "format": " {usage}%",
+    "on-click": "kitty btop"
   },
   "memory": {
-    "format": " {percentage: >3}%"
+    "format": " {percentage: >3}%",
+    "on-click": "kitty btop"
   },
   "disk": {
-    "format": "󰋊 {percentage_used: >3}%"
+    "format": "󰋊 {percentage_used: >3}%",
+    "on-click": "kitty btop"
   },
   "custom/network-traffic": {
     "exec": "~/.config/waybar/scripts/network-traffic.sh",
     "return-type": "json",
     "format-ethernet": "{icon} {ifname} ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
-    "min-length": 12
+    "min-length": 12,
+    "on-click": "kitty btop"
   },
   "group/battery-and-light": {
     "orientation": "inherit",
