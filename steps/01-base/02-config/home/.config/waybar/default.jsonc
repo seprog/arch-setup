@@ -15,8 +15,8 @@
   "modules-right": [
     "custom/updates",
     "group/audio",
-    "group/system-resources",
     "tray",
+    "group/system-resources",
     "group/battery-and-light",
     "group/power-state"
    ],
@@ -33,9 +33,6 @@
   "hyprland/submap": {
     "tooltip": false
   },
-  "tray": {
-    "icon-size": 16
-  },
   "clock#date": {
     "tooltip-format": "<big>{:%A, %d. %B %Y }</big>\n<tt><small>{calendar}</small></tt>",
     "format": " {:%A, %d. %b}",
@@ -45,33 +42,6 @@
     "tooltip-format": "<big>{:%H:%M:%S}</big>",
     "format": "{:%H:%M} ",
     "interval": 1
-  },
-  "group/system-resources": {
-    "orientation": "inherit",
-    "drawer": {
-      "transition-left-to-right": false
-    },
-    "modules": [
-      "cpu",
-      "custom/network-traffic",
-      "disk",
-      "memory"
-    ]
-  },
-  "cpu": {
-    "format": " {usage}%"
-  },
-  "memory": {
-    "format": " {percentage: >3}%"
-  },
-  "disk": {
-    "format": "󰋊 {percentage_used: >3}%"
-  },
-  "custom/network-traffic": {
-    "exec": "~/.config/waybar/scripts/network-traffic.sh",
-    "return-type": "json",
-    "format-ethernet": "{icon} {ifname} ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
-    "min-length": 12
   },
   "custom/updates": {
     "format": "{} {icon}",
@@ -118,6 +88,36 @@
     "format-source-muted": "",
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
     "on-click-right": "pavucontrol"
+  },
+  "tray": {
+    "icon-size": 16
+  },
+  "group/system-resources": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "cpu",
+      "custom/network-traffic",
+      "disk",
+      "memory"
+    ]
+  },
+  "cpu": {
+    "format": " {usage}%"
+  },
+  "memory": {
+    "format": " {percentage: >3}%"
+  },
+  "disk": {
+    "format": "󰋊 {percentage_used: >3}%"
+  },
+  "custom/network-traffic": {
+    "exec": "~/.config/waybar/scripts/network-traffic.sh",
+    "return-type": "json",
+    "format-ethernet": "{icon} {ifname} ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
+    "min-length": 12
   },
   "group/battery-and-light": {
     "orientation": "inherit",

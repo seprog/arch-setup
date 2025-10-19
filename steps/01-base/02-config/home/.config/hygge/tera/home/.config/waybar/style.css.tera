@@ -52,20 +52,20 @@ window#waybar {
 }
 
 
+.{{ monitor }} #custom-updates
+.{{ monitor }} #pulseaudio,
+.{{ monitor }} #tray,
 .{{ monitor }} #battery,
+.{{ monitor }} #backlight,
+.{{ monitor }} #idle_inhibitor,
 .{{ monitor }} #cpu,
 .{{ monitor }} #memory,
 .{{ monitor }} #disk,
 .{{ monitor }} #custom-network-traffic,
-.{{ monitor }} #idle_inhibitor,
-.{{ monitor }} #backlight,
-.{{ monitor }} #pulseaudio,
-.{{ monitor }} #tray,
-.{{ monitor }} #custom-power-state-shutdown,
-.{{ monitor }} #custom-power-state-reboot,
-.{{ monitor }} #custom-power-state-quit,
 .{{ monitor }} #custom-power-state-lock,
-.{{ monitor }} #custom-updates {
+.{{ monitor }} #custom-power-state-quit,
+.{{ monitor }} #custom-power-state-reboot,
+.{{ monitor }} #custom-power-state-shutdown {
   color: #{{ values.accents[0][8] }};
   background: {{ values.primary_rgba[0] | replace(from='\1', to='0.65') }};
 }
@@ -190,20 +190,20 @@ window#waybar {
 }
 
 
+#custom-updates
+#pulseaudio,
+#tray,
 #battery,
+#backlight,
+#idle_inhibitor,
 #cpu,
 #memory,
 #disk,
 #custom-network-traffic,
-#idle_inhibitor,
-#backlight,
-#pulseaudio,
-#tray,
-#custom-power-state-shutdown,
-#custom-power-state-reboot,
-#custom-power-state-quit,
 #custom-power-state-lock,
-#custom-updates {
+#custom-power-state-quit,
+#custom-power-state-reboot,
+#custom-power-state-shutdown {
   color: #{{ accents[0][8] }};
   background: {{ primary_rgba[0] | replace(from='\1', to='0.65') }};
 }
