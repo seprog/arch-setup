@@ -112,6 +112,15 @@ window#waybar {
 }
 
 
+#battery-and-light, #battery-and-light * {
+  padding: 0 0;
+}
+
+#battery-and-light label {
+  padding: 0 8px;
+}
+
+
 #power-state, #power-state * {
   padding: 0 0;
 }
@@ -230,6 +239,15 @@ window#waybar {
 
 #custom-updates:not(.updated) {
   color: orange;
+}
+
+
+#battery-and-light, #battery-and-light * {
+  padding: 0 0;
+}
+
+#battery-and-light label {
+  padding: 0 8px;
 }
 
 

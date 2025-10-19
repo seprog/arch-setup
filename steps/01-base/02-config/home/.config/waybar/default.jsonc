@@ -16,11 +16,9 @@
     "custom/updates",
     "pulseaudio#sink",
     "pulseaudio#source",
-    "backlight",
     "group/system-resources",
     "tray",
-    "battery",
-    "idle_inhibitor",
+    "group/battery-and-light",
     "group/power-state"
    ],
 
@@ -35,13 +33,6 @@
   },
   "hyprland/submap": {
     "tooltip": false
-  },
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "",
-      "deactivated": ""
-    }
   },
   "tray": {
     "icon-size": 16
@@ -83,23 +74,6 @@
     "format-ethernet": "{icon} {ifname} ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
     "min-length": 12
   },
-  "backlight": {
-    // "device": "acpi_video1",
-    "format": "{icon} {percent: >3}%",
-    "format-icons": ["󰃚", "󰃛", "󰃜", "󰃝", "󰃞", "󰃟", "󰃠"],
-    "on-scroll-down": "brightnessctl -c backlight set 1%-",
-    "on-scroll-up": "brightnessctl -c backlight set +1%",
-    "tooltip": false
-  },
-  "battery": {
-    "states": {
-      // "good": 95,
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "{icon} {capacity: >3}%",
-    "format-icons": ["", "", "", "", ""]
-  },
   "custom/updates": {
     "format": "{} {icon}",
     "return-type": "json",
@@ -135,6 +109,41 @@
     "format-source-muted": "",
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
     "on-click-right": "pavucontrol"
+  },
+  "group/battery-and-light": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "battery",
+      "idle_inhibitor",
+      "backlight"
+    ]
+  },
+  "battery": {
+    "states": {
+      // "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity: >3}%",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "backlight": {
+    // "device": "acpi_video1",
+    "format": "{icon} {percent: >3}%",
+    "format-icons": ["󰃚", "󰃛", "󰃜", "󰃝", "󰃞", "󰃟", "󰃠"],
+    "on-scroll-down": "brightnessctl -c backlight set 1%-",
+    "on-scroll-up": "brightnessctl -c backlight set +1%",
+    "tooltip": false
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
   },
   "group/power-state": {
     "orientation": "inherit",
