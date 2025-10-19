@@ -86,7 +86,7 @@ window#waybar {
 
 @keyframes blink {
   to {
-    color: red;
+    color: crimson;
   }
 }
 #battery.critical:not(.charging) {
@@ -224,7 +224,7 @@ window#waybar {
 
 @keyframes blink {
   to {
-    color: red;
+    color: crimson;
   }
 }
 #battery.critical:not(.charging) {
