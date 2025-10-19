@@ -30,7 +30,7 @@ extra/obs-studio
 extra/obsidian
 extra/texlive
 extra/vlc
-extra/vlc-plugin-chromecast
+extra/vlc-plugins-all
 extra/yt-dlp
 multilib/steam
 aur/anki-bin
