@@ -61,9 +61,11 @@ window#waybar {
 .{{ monitor }} #backlight,
 .{{ monitor }} #pulseaudio,
 .{{ monitor }} #tray,
-.{{ monitor }} #custom-power,
-.{{ monitor }} #custom-updates,
-.{{ monitor }} #custom-network-traffic {
+.{{ monitor }} #custom-power-state-shutdown,
+.{{ monitor }} #custom-power-state-reboot,
+.{{ monitor }} #custom-power-state-quit,
+.{{ monitor }} #custom-power-state-lock,
+.{{ monitor }} #custom-updates {
   color: #{{ values.accents[0][8] }};
   background: {{ values.primary_rgba[0] | replace(from='\1', to='0.65') }};
 }
@@ -107,6 +109,15 @@ window#waybar {
 
 #custom-updates:not(.updated) {
   color: orange;
+}
+
+
+#power-state, #power-state * {
+  padding: 0 0;
+}
+
+#power-state label {
+  padding: 0 8px;
 }
 {% endfor %}
 {% else %}
@@ -171,9 +182,11 @@ window#waybar {
 #backlight,
 #pulseaudio,
 #tray,
-#custom-power,
-#custom-updates,
-#custom-network-traffic {
+#custom-power-state-shutdown,
+#custom-power-state-reboot,
+#custom-power-state-quit,
+#custom-power-state-lock,
+#custom-updates {
   color: #{{ accents[0][8] }};
   background: {{ primary_rgba[0] | replace(from='\1', to='0.65') }};
 }
@@ -217,5 +230,14 @@ window#waybar {
 
 #custom-updates:not(.updated) {
   color: orange;
+}
+
+
+#power-state, #power-state * {
+  padding: 0 0;
+}
+
+#power-state label {
+  padding: 0 8px;
 }
 {% endif %}

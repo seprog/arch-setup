@@ -16,9 +16,6 @@ extra/gvfs
 extra/thunar
 extra/tumbler
 
-# Logout
-aur/wlogout
-
 # Launcher
 extra/wofi
 

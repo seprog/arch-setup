@@ -21,7 +21,7 @@
     "tray",
     "battery",
     "idle_inhibitor",
-    "custom/power"
+    "group/power-state"
    ],
 
   "hyprland/workspaces": {
@@ -110,11 +110,6 @@
     "exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 7200 --network-interval-seconds",
     "on-click": "kitty paru -Syu --color=auto"
   },
-  "custom/power": {
-    "format":"⏻",
-    "on-click": "wlogout",
-    "tooltip": false
-  },
   "pulseaudio#sink": {
     "scroll-step": 1, // %, can be a float
     "format": "{icon} {volume}%",
@@ -140,5 +135,37 @@
     "format-source-muted": "",
     "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
     "on-click-right": "pavucontrol"
+  },
+  "group/power-state": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/power-state-shutdown",
+      "custom/power-state-lock",
+      "custom/power-state-quit",
+      "custom/power-state-reboot"
+    ]
+  },
+  "custom/power-state-shutdown": {
+    "format":"󰐥",
+    "on-click": "shutdown now",
+    "tooltip": false
+  },
+  "custom/power-state-reboot": {
+    "format":"󰜉",
+    "on-click": "reboot",
+    "tooltip": false
+  },
+  "custom/power-state-quit": {
+    "format":"󰗽",
+    "on-click": "hyprctl dispatch exit",
+    "tooltip": false
+  },
+  "custom/power-state-lock": {
+    "format":"󰌾",
+    "on-click": "hyprlock",
+    "tooltip": false
   }
 }
