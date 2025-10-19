@@ -17,10 +17,7 @@
     "pulseaudio#sink",
     "pulseaudio#source",
     "backlight",
-    "cpu",
-    "memory",
-    "disk",
-    "custom/network-traffic",
+    "group/system-resources",
     "tray",
     "battery",
     "idle_inhibitor",
@@ -59,6 +56,18 @@
     "format": "{:%H:%M} ",
     "interval": 1
   },
+  "group/system-resources": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "cpu",
+      "custom/network-traffic",
+      "disk",
+      "memory"
+    ]
+  },
   "cpu": {
     "format": " {usage}%"
   },
@@ -67,6 +76,12 @@
   },
   "disk": {
     "format": "󰋊 {percentage_used: >3}%"
+  },
+  "custom/network-traffic": {
+    "exec": "~/.config/waybar/scripts/network-traffic.sh",
+    "return-type": "json",
+    "format-ethernet": "{icon} {ifname} ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
+    "min-length": 12
   },
   "backlight": {
     // "device": "acpi_video1",
@@ -99,12 +114,6 @@
     "format":"⏻",
     "on-click": "wlogout",
     "tooltip": false
-  },
-  "custom/network-traffic": {
-    "exec": "~/.config/waybar/scripts/network-traffic.sh",
-    "return-type": "json",
-    "format-ethernet": "{icon} {ifname} ⇣{bandwidthDownBytes} ⇡{bandwidthUpBytes}",
-    "min-length": 12
   },
   "pulseaudio#sink": {
     "scroll-step": 1, // %, can be a float
