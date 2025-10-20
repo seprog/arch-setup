@@ -2,17 +2,17 @@
 
 
 # Config
-wh_categories="111"
-wh_purity="100"
-wh_at_least="1920x1080"
-wh_ratios="16x9"
-wh_top_range="1y"
-wh_sorting="toplist"
-wh_order="asc"
-wh_colors=""
-wh_pages_start=1
-wh_pages_end=8
-wh_api_key=""
+[[ -n "$wh_categories" ]] || wh_categories="111"
+[[ -n "$wh_purity" ]] || wh_purity="100"
+[[ -n "$wh_at_least" ]] || wh_at_least="1920x1080"
+[[ -n "$wh_ratios" ]] || wh_ratios="16x9"
+[[ -n "$wh_top_range" ]] || wh_top_range="1y"
+[[ -n "$wh_sorting" ]] || wh_sorting="toplist"
+[[ -n "$wh_order" ]] || wh_order="asc"
+[[ -n "$wh_colors" ]] || wh_colors=""
+[[ -n "$wh_pages_start" ]] || wh_pages_start=1
+[[ -n "$wh_pages_end" ]] || wh_pages_end=8
+[[ -n "$wh_api_key" ]] || wh_api_key=""
 
 output_dir="$HOME/Pictures/Wallpapers"
 
