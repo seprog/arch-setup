@@ -14,7 +14,7 @@
 [[ -n "$wh_pages_end" ]] || wh_pages_end=8
 [[ -n "$wh_api_key" ]] || wh_api_key=""
 
-output_dir="$HOME/Pictures/Wallpapers"
+[[ -n "$output_dir" ]] || output_dir="$HOME/Pictures/Wallpapers"
 
 
 # Create target folder
