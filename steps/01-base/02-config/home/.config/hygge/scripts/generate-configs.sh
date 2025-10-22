@@ -16,5 +16,5 @@ do
   tera \
     --template $tera_file \
     --out ${tera_file_stripped/$tera_home/$HOME} \
-    $theme_json
+    "$theme_json"
 done

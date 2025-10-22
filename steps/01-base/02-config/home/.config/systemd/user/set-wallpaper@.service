@@ -1,0 +1,13 @@
+[Unit]
+Description=Set wallpaper using hygge set-wallpaper script (instance: %i)
+PartOf=graphical-session.target
+Requires=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/.config/hygge/scripts/set-wallpaper.sh %I
+Restart=on-failure
+
+[Install]
+WantedBy=graphical-session.target
