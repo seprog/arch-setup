@@ -11,7 +11,7 @@ if [[ -n "$1" ]]; then
   if [[ "$1" == "focused" ]]; then
     monitors=(${focused_monitor})
   elif [[ "$1" == "choose" ]]; then
-    monitors=($(hyprctl monitors -j | jq -r '.[].name' | wofi --dmenu))
+    monitors=($(hyprctl monitors -j | jq -r '.[].name' | wofi --dmenu --prompt "Select Monitor"))
   else
     monitors=($1)
   fi
@@ -33,7 +33,7 @@ do
   #      (accorging to https://github.com/hyprwm/hyprpaper?tab=readme-ov-file#usage)
   if [[ -n "$2" ]]; then
     if [[ "$2" == "choose" ]]; then
-      wallpaper=$(find -L "${wallpaper_dir}" -type f | wofi --dmenu)
+      wallpaper=$(bash ${scripts_dir}/wallpicker.sh)
     else
       wallpaper="$2"
     fi
