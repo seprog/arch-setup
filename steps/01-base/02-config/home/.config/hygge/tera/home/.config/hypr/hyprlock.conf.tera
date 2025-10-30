@@ -52,7 +52,7 @@ label {
 # time
 label {
   monitor = {{ monitor }}
-  text = cmd[update:1000] echo "$(date +"%-I:%M")"
+  text = cmd[update:1000] echo "$(date +"%R")"
   color = rgba({{ values.accents[0][6] }}FB)
   font_size = 95
   font_family = Noto Nerd Font Extrabold
@@ -94,7 +94,7 @@ label {
 
 # time
 label {
-  text = cmd[update:1000] echo "$(date +"%-I:%M")"
+  text = cmd[update:1000] echo "$(date +"%R")"
   color = rgba({{ accents[0][6] }}FB)
   font_size = 95
   font_family = Noto Nerd Font Extrabold
